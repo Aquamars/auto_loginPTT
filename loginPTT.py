@@ -2,7 +2,6 @@
 import telnetlib
 import sys
 import account.Account  #My file. It contains Account.id, Account.password 
-# from account.Account import Account
 import time
 print(account.Account.id)
 tn = telnetlib.Telnet('ptt.cc')
@@ -57,4 +56,4 @@ if "請輸入代號" in content:
     tn.write("\r\n".encode('utf8') )
         
 else:
-    print("沒有可輸入帳號的欄位，網站可能掛了").encode('utf-8')
+    print("PTT probably close.").encode('utf-8')
